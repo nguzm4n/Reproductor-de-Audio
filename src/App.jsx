@@ -62,9 +62,16 @@ const forward = () => {
  
 if(chosen.current < songs.length) {
   chosen.current++
+  console.log(chosen.current)
 }
 }
 const backward = () => {
+  if(chosen.current == 0) {
+    return} else {
+    chosen.current--
+    console.log(chosen.current)}
+  
+
 
 }
 
@@ -82,7 +89,8 @@ const backward = () => {
       </div>
     <audio ref={audioRef} controls />
     <TbPlayerSkipBack 
-    className='back'/>
+    className='back'
+    onClick={backward}/>
     <TbPlayerPlayFilled 
     className='play'
     onClick={continuePlay}/>
