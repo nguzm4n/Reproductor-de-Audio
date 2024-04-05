@@ -44,6 +44,7 @@ const [songs, setSongs] = useState([
 
 const chosen = useRef(null)
 const audioRef = useRef(null)
+const [select, setSelect] = useState("")
 
 const play = (url, index) => {
   const fullUrl = `https://playground.4geeks.com${url}`
@@ -61,17 +62,24 @@ const pause = () => {
 const forward = () => {
  
 if(chosen.current < songs.length) {
-  chosen.current++
-  console.log(chosen.current)
-}
+  chosen.current++ 
+} songs[chosen.current].url
+const fullUrl = `https://playground.4geeks.com${songs[chosen.current].url}`
+audioRef.current.src = fullUrl
+audioRef.current.play()
+console.log(chosen.current)
 }
 const backward = () => {
   if(chosen.current == 0) {
     return} else {
     chosen.current--
+
     console.log(chosen.current)}
   
-
+    const fullUrl = `https://playground.4geeks.com${songs[chosen.current].url}`
+    audioRef.current.src = fullUrl
+    audioRef.current.play()
+    console.log(chosen.current)
 
 }
 
