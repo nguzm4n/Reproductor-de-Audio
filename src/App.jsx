@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import React from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { TbPlayerPlayFilled, TbPlayerPauseFilled, TbPlayerSkipBack, TbPlayerSkipForward } from "react-icons/tb";
 
 
